@@ -1,0 +1,40 @@
+{
+	"globalStyle": {
+		"pageOrientation": "portrait",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "Hello uniapp",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#F8F8F8",
+		"backgroundColorTop": "#F4F5F6",
+		"backgroundColorBottom": "#F4F5F6"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/tabBar/component/component",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "内置组件"
+			},
+			{
+				"pagePath": "pages/tabBar/API/API",
+				"iconPath": "static/api.png",
+				"selectedIconPath": "static/apiHL.png",
+				"text": "接口"
+			}, {
+				"pagePath": "pages/tabBar/extUI/extUI",
+				"iconPath": "static/extui.png",
+				"selectedIconPath": "static/extuiHL.png",
+				"text": "扩展组件"
+			}, {
+				"pagePath": "pages/tabBar/template/template",
+				"iconPath": "static/template.png",
+				"selectedIconPath": "static/templateHL.png",
+				"text": "模板"
+			}
+		]
+	}
+}
