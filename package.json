@@ -39,7 +39,7 @@
     "core-js": "^3.6.4",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "uni-pages-hot-modules": "0.0.6",
+    "uni-pages-hot-modules": "^0.0.7",
     "vue": "^2.6.11",
     "vuex": "^3.0.1"
   },
