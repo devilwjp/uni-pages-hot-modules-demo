@@ -49,4 +49,4 @@ function exportPagesConfig (pagesJson={}, loader={}) {
     }
 }
 
-module.exports=exportPagesConfig
+module.exports = exportPagesConfig
