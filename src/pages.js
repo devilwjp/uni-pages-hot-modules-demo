@@ -11,6 +11,7 @@ const { removeDuplicationAndSetIndexPage } = require('./utils/uniPagesUtils_comm
  * 输出最终的pages.json解析内容
  * @param pagesJson <Object> src/pages.json的文件解析内容（作为初始内容传入）
  * @param loader <Object> @dcloudio/webpack-uni-pages-loader会传入一个loader对象
+ * @returns {Object} uni-app需要的pages.json配置内容
  */
 function exportPagesConfig (pagesJson={}, loader={}) {
     // 初始化uni-pages-hot-modules（输入loader）

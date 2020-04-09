@@ -1,4 +1,13 @@
-// 对pages去重并且设置首页
+/**
+ * 此文件作为pages.js的工具包，遵循CommonJs规范
+ */
+
+/**
+ * 对pages进行去重，并且可以设置首页
+ * @param pages <Array> uni-app pages数组
+ * @param indexPath <String> 首页地址，可省
+ * @returns {Array} 返回去重和排序后pages
+ */
 function removeDuplicationAndSetIndexPage(pages = [], indexPath = pages[0] && pages[0].path || ''){
     let uniquePageMap = {}, resultPages=[], indexPage=[]
 
