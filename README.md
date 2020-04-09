@@ -43,6 +43,8 @@ module.exports=(pagesJson,loader)=>{
     let baseSubPackages = []
 
     return {
+        // 合并pages.json的内容
+        ...pagesJson,
         pages:[
             ...basePages,
             ...hotRequire('./page_modules/tabbar.js'),
@@ -55,8 +57,7 @@ module.exports=(pagesJson,loader)=>{
             ...hotRequire('./subpackage_modules/api.js'),
             ...hotRequire('./subpackage_modules/extUI.js'),
             ...hotRequire('./subpackage_modules/template.js')
-        ],
-        ...pagesJson
+        ]
     }
 }
 
