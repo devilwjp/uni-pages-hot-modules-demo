@@ -2,7 +2,7 @@ module.exports=(pagesJson, loader)=>{
     const hotRequire = require('uni-pages-hot-modules')(loader)
     let basePages = []
     let baseSubPackages = []
-// 12
+
     return {
         pages:[
             ...basePages,
