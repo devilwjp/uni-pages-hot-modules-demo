@@ -17,8 +17,10 @@ function removeDuplicationAndSetIndexPage(pages = [], indexPath = pages[0] && pa
     })
 
     // 抽出首页
-    indexPage.push(uniquePageMap[indexPath])
-    delete uniquePageMap[indexPath]
+    if (uniquePageMap[indexPath]) {
+        indexPage.push(uniquePageMap[indexPath])
+        delete uniquePageMap[indexPath]
+    }
 
     for (let i in uniquePageMap){
         resultPages.push(uniquePageMap[i])
