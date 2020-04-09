@@ -21,25 +21,31 @@ function exportPagesConfig (pagesJson={}, loader={}) {
     // subPackages的初始配置
     let baseSubPackages = []
 
+    // 要输出的pages
+    let pages = removeDuplicationAndSetIndexPage([
+        ...basePages,
+        ...hotRequire('./page_modules/tabbar.js'),
+        // 故意重复引入，用来验证去重方法
+        ...hotRequire('./page_modules/tabbar.js'),
+        ...hotRequire('./page_modules/component.js'),
+        ...hotRequire('./page_modules/appPlus.js')
+    ],
+    // 设置首页(可省)
+    'pages/component/swiper/swiper')
+
+    // 要输出的subPackages
+    let subPackages = [
+        ...baseSubPackages,
+        ...hotRequire('./subpackage_modules/api.js'),
+        ...hotRequire('./subpackage_modules/extUI.js'),
+        ...hotRequire('./subpackage_modules/template.js')
+    ]
+
     return {
         // 合并pages.json的初始内容
         ...pagesJson,
-        pages: removeDuplicationAndSetIndexPage([
-                ...basePages,
-                ...hotRequire('./page_modules/tabbar.js'),
-                // 故意重复引入，用来验证去重方法
-                ...hotRequire('./page_modules/tabbar.js'),
-                ...hotRequire('./page_modules/component.js'),
-                ...hotRequire('./page_modules/appPlus.js')
-            ],
-            // 设置首页(可省)
-            'pages/component/swiper/swiper'),
-        subPackages: [
-            ...baseSubPackages,
-            ...hotRequire('./subpackage_modules/api.js'),
-            ...hotRequire('./subpackage_modules/extUI.js'),
-            ...hotRequire('./subpackage_modules/template.js')
-        ]
+        pages,
+        subPackages
     }
 }
 
