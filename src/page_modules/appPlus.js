@@ -30,7 +30,7 @@ module.exports=[
         }
     },
     // #ifdef H5 || APP-PLUS
-    ...(process.env.UNI_PLATFORM === 'APP-PLUS' || process.env.UNI_PLATFORM === 'H5' ? [{
+    ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' || process.env.VUE_APP_PLATFORM === 'H5' ? [{
         "path": "pages/about/about",
         "style": {
             "navigationBarTitleText": "关于"

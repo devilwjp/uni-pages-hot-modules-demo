@@ -30,6 +30,12 @@
             // #endif
         },
         onShow: function() {
+            // console.log(this.$Router)
+            // setTimeout(()=>{
+            //     this.$Router.push({
+            //         path:'/pages/component/view/view'
+            //     })
+            // },5000)
             console.log('App Show')
         },
         onHide: function() {

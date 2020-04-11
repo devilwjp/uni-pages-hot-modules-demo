@@ -39,7 +39,9 @@
     "core-js": "^3.6.4",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
-    "uni-pages-hot-modules": "^0.0.9",
+    "require-context": "^1.1.0",
+    "uni-hold-tabbar": "^1.0.0",
+    "uni-pages-hot-modules": "^0.0.10",
     "vue": "^2.6.11",
     "vuex": "^3.0.1"
   },

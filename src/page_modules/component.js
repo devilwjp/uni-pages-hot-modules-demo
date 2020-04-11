@@ -18,7 +18,7 @@ module.exports=[
         }
     },
     // #ifndef MP-TOUTIAO
-    ...((process.env.UNI_PLATFORM !== 'MP-TOUTIAO') ? [{
+    ...((process.env.VUE_APP_PLATFORM !== 'MP-TOUTIAO') ? [{
         "path": "pages/component/cover-view/cover-view",
         "style": {
             "navigationBarTitleText": "cover-view"
@@ -119,7 +119,7 @@ module.exports=[
         }
     },
     // #ifdef APP-PLUS || MP-WEIXIN || H5
-    ...(process.env.UNI_PLATFORM === 'APP-PLUS' || process.env.UNI_PLATFORM === 'MP-WEIXIN' || process.env.UNI_PLATFORM === 'H5' ? [{
+    ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' || process.env.VUE_APP_PLATFORM === 'MP-WEIXIN' || process.env.VUE_APP_PLATFORM === 'H5' ? [{
         "path": "pages/component/editor/editor",
         "style": {
             "navigationBarTitleText": "editor"
@@ -157,7 +157,7 @@ module.exports=[
         }
     },
     // #ifndef MP-ALIPAY || MP-TOUTIAO
-    ...(!(process.env.UNI_PLATFORM === 'MP-ALIPAY' || process.env.UNI_PLATFORM === 'MP-TOUTIAO') ? [{
+    ...(!(process.env.VUE_APP_PLATFORM === 'MP-ALIPAY' || process.env.VUE_APP_PLATFORM === 'MP-TOUTIAO') ? [{
         "path": "pages/component/audio/audio",
         "style": {
             "navigationBarTitleText": "audio"
@@ -165,7 +165,7 @@ module.exports=[
     }] : []),
     // #endif
     // #ifndef MP-TOUTIAO
-    ...(process.env.UNI_PLATFORM !== 'MP-TOUTIAO' ? [{
+    ...(process.env.VUE_APP_PLATFORM !== 'MP-TOUTIAO' ? [{
         "path": "pages/component/map/map",
         "style": {
             "navigationBarTitleText": "map"
@@ -185,7 +185,7 @@ module.exports=[
         }
     },
     // #ifndef H5 || MP-BAIDU
-    ...(!(process.env.UNI_PLATFORM === 'H5' || process.env.UNI_PLATFORM === 'MP-BAIDU') ? [{
+    ...(!(process.env.VUE_APP_PLATFORM === 'H5' || process.env.VUE_APP_PLATFORM === 'MP-BAIDU') ? [{
         "path": "pages/component/ad/ad",
         "style": {
             "navigationBarTitleText": "AD"
@@ -193,7 +193,7 @@ module.exports=[
     }] : []),
     // #endif
     // #ifdef APP-PLUS
-    ...(process.env.UNI_PLATFORM === 'APP-PLUS' ? [{
+    ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' ? [{
         "path": "pages/component/web-view-local/web-view-local",
         "style": {}
     }] : [])

@@ -32,6 +32,21 @@ function removeDuplicationAndSetIndexPage(pages = [], indexPath = pages[0] && pa
     ]
 }
 
+/**
+ * 导出uni-simple-router需要的路由表格式
+ * @param modules {Array} uni的pages.json中的pages数组
+ * @returns {Array}
+ */
+function getRouterTableList (modules) {
+    return modules.map(({path,style,...others}) => ({
+        path: '/' + path,
+        ...others
+    }))
+}
+
+
+
 module.exports={
-    removeDuplicationAndSetIndexPage
+    removeDuplicationAndSetIndexPage,
+    getRouterTableList
 }
