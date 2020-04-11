@@ -19,7 +19,7 @@ module.exports=[{
             }
         },
         // #ifdef APP-PLUS || H5 || MP-ALIPAY
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(MP-ALIPAY)|(H5))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(MP-ALIPAY)|(H5))$/) ? [{
             "path": "nav-transparent/nav-transparent",
             "style": {
                 "navigationBarTitleText": "透明渐变导航栏",
@@ -28,7 +28,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifdef APP-PLUS || H5
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(H5))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(H5))$/) ? [{
             "path": "nav-button/nav-button",
             "style": {
                 "navigationBarTitleText": "导航栏带自定义按钮",
@@ -47,7 +47,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifdef APP-PLUS || H5 || MP-ALIPAY
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(MP-ALIPAY)|(H5))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(MP-ALIPAY)|(H5))$/) ? [{
             "path": "nav-image/nav-image",
             "style": {
                 "navigationBarBackgroundColor": "#FFFFFF",
@@ -57,7 +57,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifdef APP-PLUS || H5
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(H5))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(H5))$/) ? [{
             "path": "nav-city-dropdown/nav-city-dropdown",
             "style": {
                 "navigationBarTitleText": "导航栏带城市选择",
@@ -187,7 +187,7 @@ module.exports=[{
             }
         },
         // #ifdef APP-PLUS || H5 || MP-WEIXIN || MP-QQ
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN)|(H5)|(MP-QQ))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN)|(H5)|(MP-QQ))$/) ? [{
             "path": "swiper-vertical/swiper-vertical",
             "style": {
                 "navigationBarTitleText": "上下滑动切换视频",
@@ -204,7 +204,7 @@ module.exports=[{
             }] : []),
         // #endif
         // #ifdef APP-PLUS
-        ...(process.env.UNI_PLATFORM.match(/^(APP-PLUS)$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^(APP-PLUS)$/) ? [{
             "path": "swiper-list-nvue/swiper-list-nvue",
             "style": {
                 "navigationBarTitleText": "swiper-list"
@@ -218,7 +218,7 @@ module.exports=[{
             }
         },
         // #ifdef APP-PLUS || MP-WEIXIN || MP-QQ || H5
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN)|(H5)|(MP-QQ))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN)|(H5)|(MP-QQ))$/) ? [{
             "path": "vant-button/vant-button",
             "style": {
                 "navigationBarTitleText": "微信自定义组件示例",

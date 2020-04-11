@@ -7,7 +7,7 @@ module.exports=[{
         }
     },
         // #ifdef APP-PLUS
-        ...(process.env.UNI_PLATFORM === 'APP-PLUS' ? [{
+        ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' ? [{
             "path": "subnvue/subnvue",
             "style": {
                 "navigationBarTitleText": "SubNvue",
@@ -255,7 +255,7 @@ module.exports=[{
             }
         },
         // #ifndef MP-QQ || MP-TOUTIAO
-        ...(!(process.env.UNI_PLATFORM === 'MP-QQ' || process.env.UNI_PLATFORM === 'MP-TOUTIAO') ? [{
+        ...(!(process.env.VUE_APP_PLATFORM === 'MP-QQ' || process.env.VUE_APP_PLATFORM === 'MP-TOUTIAO') ? [{
             "path": "map/map",
             "style": {
                 "navigationBarTitleText": "map"
@@ -263,7 +263,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifdef APP-PLUS
-        ...(process.env.UNI_PLATFORM === 'APP-PLUS' ? [{
+        ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' ? [{
             "path": "map-search/map-search",
             "style": {
                 "navigationBarTitleText": "map search"
@@ -283,7 +283,7 @@ module.exports=[{
             }
         },
         // #ifndef MP-TOUTIAO
-        ...(process.env.UNI_PLATFORM !== 'MP-TOUTIAO' ? [{
+        ...(process.env.VUE_APP_PLATFORM !== 'MP-TOUTIAO' ? [{
             "path": "choose-location/choose-location",
             "style": {
                 "navigationBarTitleText": "使用地图选择位置"
@@ -303,7 +303,7 @@ module.exports=[{
             }
         },
         // #ifdef APP-PLUS || MP-WEIXIN
-        ...(process.env.UNI_PLATFORM === 'APP-PLUS' || process.env.UNI_PLATFORM === 'MP-WEIXIN' ? [{
+        ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' || process.env.VUE_APP_PLATFORM === 'MP-WEIXIN' ? [{
             "path": "rewarded-video-ad/rewarded-video-ad",
             "style": {
                 "navigationBarTitleText": "激励视频广告"
@@ -311,7 +311,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifndef H5
-        ...(process.env.UNI_PLATFORM !== 'H5' ? [{
+        ...(process.env.VUE_APP_PLATFORM !== 'H5' ? [{
             "path": "brightness/brightness",
             "style": {
                 "navigationBarTitleText": "屏幕亮度"
@@ -319,7 +319,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifndef H5 || MP-ALIPAY
-        ...(!(process.env.UNI_PLATFORM === 'H5' || process.env.UNI_PLATFORM === 'MP-ALIPAY') ? [{
+        ...(!(process.env.VUE_APP_PLATFORM === 'H5' || process.env.VUE_APP_PLATFORM === 'MP-ALIPAY') ? [{
             "path": "save-media/save-media",
             "style": {
                 "navigationBarTitleText": "保存媒体到本地"
@@ -327,7 +327,7 @@ module.exports=[{
         }] : []),
         // #endif
         // #ifdef APP-PLUS || MP-WEIXIN || MP-QQ
-        ...(process.env.UNI_PLATFORM === 'APP-PLUS' || process.env.UNI_PLATFORM === 'MP-WEIXIN' || process.env.UNI_PLATFORM === 'MP-QQ' ? [{
+        ...(process.env.VUE_APP_PLATFORM === 'APP-PLUS' || process.env.VUE_APP_PLATFORM === 'MP-WEIXIN' || process.env.VUE_APP_PLATFORM === 'MP-QQ' ? [{
             "path": "bluetooth/bluetooth",
             "style": {
                 "navigationBarTitleText": "蓝牙"
@@ -341,7 +341,7 @@ module.exports=[{
             }] : []),
         // #endif
         // #ifdef APP-PLUS || MP-WEIXIN
-        ...(process.env.UNI_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN))$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^((APP-PLUS)|(MP-WEIXIN))$/) ? [{
             "path": "ibeacon/ibeacon",
             "style": {
                 "navigationBarTitleText": "iBeacon"
@@ -355,7 +355,7 @@ module.exports=[{
             }
         },
         // #ifndef MP-ALIPAY
-        ...(process.env.UNI_PLATFORM.match(/^(MP-ALIPAY)$/) ? [{
+        ...(process.env.VUE_APP_PLATFORM.match(/^(MP-ALIPAY)$/) ? [{
             "path": "websocket-socketTask/websocket-socketTask",
             "style": {
                 "navigationBarTitleText": "websocket-socketTask"
