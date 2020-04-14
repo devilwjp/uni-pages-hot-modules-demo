@@ -1,7 +1,7 @@
 <template>
     <view class="uni-container">
         <view class="uni-header-logo">
-            <image class="uni-header-image" src="/static/componentIndex.png"></image>
+            <!--<image class="uni-header-image" src="/static/componentIndex.png"></image>-->
         </view>
         <view class="uni-hello-text">
             <text class="hello-text">uni-app内置组件，展示样式仅供参考，文档详见：</text>
@@ -184,4 +184,9 @@
 
 <style>
     @import '../../../common/uni-nvue.css';
+    .uni-header-logo{
+        width:200rpx;
+        height:200rpx;
+        background:url(/static/componentIndex.png)
+    }
 </style>

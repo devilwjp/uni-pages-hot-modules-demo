@@ -1,3 +1,4 @@
+// 1212
 module.exports=[{
     "path": "pages/tabBar/component/component",
     "style": {

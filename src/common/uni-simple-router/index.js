@@ -58,7 +58,8 @@ class Router {
 			compile.APP(() => {
 				this.loadded = true;
 			})
-			const URLQuery = formatURLQuery(`?${toRule.query}`);
+			const URLQuery = formatU
+			RLQuery(`?${toRule.query}`);
 			let url = `${toRule.url}${URLQuery}`;
 			uni[this.methods[ags.rule.NAVTYPE]]({
 				url,
@@ -179,10 +180,10 @@ class Router {
 	// 		warn(`非H5端没有此api ‘addRoutes’ `)
 	// 	}
 	// }
-	
+
 	/**
 	 * 获取当前页面下的 Route 信息
-	 * 
+	 *
 	 * @param {Object} Vim 当前开发者可以传递一个 vue 组件对象 来获取当前下的 Route 信息
 	 */
 	getPageRoute(Vim) {
@@ -219,9 +220,9 @@ Router.install = function(Vue) {
 };
 export default Router;
 /**
- * 
+ *
  * @param {VueComponent } Vim vue实例对象
- * @param {dom} el	dom节点选择器 
+ * @param {dom} el	dom节点选择器
  */
 export const RouterMount = function(Vim, el) {
 	switch (appPlatform(true)) {

@@ -44,9 +44,26 @@ function getRouterTableList (modules) {
     }))
 }
 
-
+/**
+ * 导出uni-simple-router需要的路由表格式（由分包配置中导）
+ * @param subPackage_modules {Array} uni的pages.json中的subPackages数组
+ * @returns {Array}121
+ */
+function subPackageToPageConfigForSimpleRouter (subPackage_modules) {
+    const routerList = []
+    subPackage_modules.forEach((sub) => {
+        sub.pages.forEach(({path,style,...other}) => {
+            routerList.push({
+                path: '/' + sub.root + '/' + path,
+                ...other
+            })
+        })
+    })
+    return routerList
+}
 
 module.exports={
     removeDuplicationAndSetIndexPage,
-    getRouterTableList
+    getRouterTableList,
+    subPackageToPageConfigForSimpleRouter
 }

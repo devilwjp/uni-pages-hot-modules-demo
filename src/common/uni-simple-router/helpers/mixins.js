@@ -26,8 +26,8 @@ const getMixins = function(Router) {
 			},
 			onLoad:function(){
 				//第一个页面 拦截所有生命周期
-				if(uniAppHook.onLaunched&&!uniAppHook.pageReady){	
-					uniAppHook.onLaunched=false;	
+				if(uniAppHook.onLaunched&&!uniAppHook.pageReady){
+					uniAppHook.onLaunched=false;
 					proxyIndexHook.call(this,Router.$root);
 				}
 				removeBackPressEvent(this.$mp.page,this.$options);  //移除页面的onBackPress事件
@@ -43,7 +43,7 @@ const getMixins = function(Router) {
 			},
 			onLoad:function(){
 				if(uniAppHook.onLaunched&&!uniAppHook.pageReady){	//必须是第一个页面
-					uniAppHook.onLaunched=false;	
+					uniAppHook.onLaunched=false;
 					appletsProxyIndexHook.call(this,Router.$root);
 				}
 			},

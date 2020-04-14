@@ -47,9 +47,7 @@ function exportPagesConfig (pagesJson={}, loader={}) {
     // 要输出的subPackages
     let subPackages = [
         ...baseSubPackages,
-        ...hotRequire('./subpackage_modules/api.js'),
-        ...hotRequire('./subpackage_modules/extUI.js'),
-        ...hotRequire('./subpackage_modules/template.js')
+        ...hotRequire('./subpackage_modules/index.js')
     ]
 
     return {

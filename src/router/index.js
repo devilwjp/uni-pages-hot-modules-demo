@@ -1,15 +1,16 @@
-import { getRouterTableList } from '../utils/uniPagesUtils_commonJs'
+import { getRouterTableList, subPackageToPageConfigForSimpleRouter } from '../utils/uniPagesUtils_commonJs'
 import Vue from 'vue'
 //这里仅示范npm安装方式的引入，其它方式引入请看最上面【安装】部分
 import Router from '../common/uni-simple-router'
+import pages from '../page_modules'
+import subPackages from '../subpackage_modules'
 
 Vue.use(Router)
 //初始化
 const router = new Router({
     routes: [
-        ...getRouterTableList(require('../page_modules')),
-        // ...getRouterTableList(require('../page_modules/component')),
-        // ...getRouterTableList(require('../page_modules/tabbar'))
+        ...getRouterTableList(pages),
+        ...subPackageToPageConfigForSimpleRouter(subPackages),
     ]//路由表
 });
 
