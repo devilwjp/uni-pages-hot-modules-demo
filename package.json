@@ -41,7 +41,7 @@
     "regenerator-runtime": "^0.12.1",
     "require-context": "^1.1.0",
     "uni-hold-tabbar": "^1.0.0",
-    "uni-pages-hot-modules": "^0.0.10",
+    "uni-pages-hot-modules": "^0.1.1",
     "vue": "^2.6.11",
     "vuex": "^3.0.1"
   },

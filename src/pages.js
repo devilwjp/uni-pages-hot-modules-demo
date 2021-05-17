@@ -13,7 +13,7 @@ const { removeDuplicationAndSetIndexPage } = require('./utils/uniPagesUtils_comm
  * 在vue.config.js中使用DefinePlugin插件，将hotRequire替换成require
  * 就可以在客户端代码引入路由模块，可用于uni-simple-router，并且做到本地和客户端代码双向热重载
  */
-global.hotRequire = require('uni-pages-hot-modules')
+const { hot } = require('uni-pages-hot-modules')
 
 /**
  * 输出最终的pages.json解析内容
@@ -21,9 +21,7 @@ global.hotRequire = require('uni-pages-hot-modules')
  * @param loader <Object> @dcloudio/webpack-uni-pages-loader会传入一个loader对象
  * @returns {Object} uni-app需要的pages.json配置内容
  */
-function exportPagesConfig (pagesJson={}, loader={}) {
-    // 初始化uni-pages-hot-modules（输入loader）
-    hotRequire(loader)
+module.exports = hot((pagesJson={}) => {
     // pages的初始配置
     let basePages = []
     // subPackages的初始配置
@@ -33,12 +31,12 @@ function exportPagesConfig (pagesJson={}, loader={}) {
     let pages = removeDuplicationAndSetIndexPage(
         [
             ...basePages,
-            ...hotRequire('./page_modules/index.js')
-            // ...hotRequire('./page_modules/tabbar.js'),
+            ...require('./page_modules/index.js')
+            // ...require('./page_modules/tabbar.js'),
             // // 故意重复引入，用来验证去重方法
-            // ...hotRequire('./page_modules/tabbar.js'),
-            // ...hotRequire('./page_modules/component.js'),
-            // ...hotRequire('./page_modules/appPlus.js')
+            // ...require('./page_modules/tabbar.js'),
+            // ...require('./page_modules/component.js'),
+            // ...require('./page_modules/appPlus.js')
         ],
         // 设置首页(可省)
         'pages/tabBar/component/component'
@@ -47,7 +45,7 @@ function exportPagesConfig (pagesJson={}, loader={}) {
     // 要输出的subPackages
     let subPackages = [
         ...baseSubPackages,
-        ...hotRequire('./subpackage_modules/index.js')
+        ...require('./subpackage_modules/index.js')
     ]
 
     return {
@@ -56,6 +54,4 @@ function exportPagesConfig (pagesJson={}, loader={}) {
         pages,
         subPackages
     }
-}
-
-module.exports = exportPagesConfig
+})
