@@ -41,7 +41,7 @@
     "regenerator-runtime": "^0.12.1",
     "require-context": "^1.1.0",
     "uni-hold-tabbar": "^1.0.0",
-    "uni-pages-hot-modules": "^0.1.1",
+    "uni-pages-hot-modules": "^1.0.0",
     "vue": "^2.6.11",
     "vuex": "^3.0.1"
   },
@@ -63,6 +63,7 @@
     "mini-types": "*",
     "miniprogram-api-typings": "^2.8.0-2",
     "postcss-comment": "^2.0.0",
+    "tmp": "^0.2.1",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
